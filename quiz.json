@@ -1,0 +1,29 @@
+[
+  {
+    "question": "What is 3 + 5?",
+    "options": [
+      "6",
+      "8",
+      "10"
+    ],
+    "answer": "8"
+  },
+  {
+    "question": "What is 9 x 2?",
+    "options": [
+      "18",
+      "16",
+      "20"
+    ],
+    "answer": "18"
+  },
+  {
+    "question": "What is 15 - 4?",
+    "options": [
+      "11",
+      "10",
+      "9"
+    ],
+    "answer": "11"
+  }
+]
