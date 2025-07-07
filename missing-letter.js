@@ -32,6 +32,8 @@ function submitGuess() {
   document.getElementById("guessInput").value = "";
   if (!displayWord.includes("_")) {
     document.getElementById("message").innerText = "You completed the word! Starting a new one...";
+   score++;
+    document.getElementById("message").innerText += ` You have completed ${score} word(s).`;
     setTimeout(newGame, 2000);
   }
 }
