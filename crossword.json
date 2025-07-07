@@ -1,14 +1,22 @@
 [
-  {
-    "clue": "Capital of France",
-    "answer": "Paris"
-  },
-  {
-    "clue": "Opposite of cold",
-    "answer": "Hot"
-  },
-  {
-    "clue": "Device to call someone",
-    "answer": "Phone"
-  }
+  {"clue": "Code that runs in the browser", "answer": "JavaScript"},
+  {"clue": "A guess that needs testing", "answer": "Hypothesis"},
+  {"clue": "Invisible layer of the Earth", "answer": "Atmosphere"},
+  {"clue": "Opposite of artificial", "answer": "Natural"},
+  {"clue": "Tool used for calculations", "answer": "Calculator"},
+  {"clue": "Where you write your code", "answer": "Editor"},
+  {"clue": "Precise and without error", "answer": "Accurate"},
+  {"clue": "Essential characteristic", "answer": "Trait"},
+  {"clue": "Science of secure communication", "answer": "Cryptography"},
+  {"clue": "Learning through experience", "answer": "Practice"},
+  {"clue": "Used to organize time", "answer": "Schedule"},
+  {"clue": "Pioneering discovery", "answer": "Breakthrough"},
+  {"clue": "Symbol of an idea", "answer": "Metaphor"},
+  {"clue": "Where web files are stored", "answer": "Server"},
+  {"clue": "Natural satellite", "answer": "Moon"},
+  {"clue": "Major life transition", "answer": "Milestone"},
+  {"clue": "Improvement of something", "answer": "Refinement"},
+  {"clue": "Conceptual foundation", "answer": "Philosophy"},
+  {"clue": "Digital learning system", "answer": "Platform"},
+  {"clue": "Simulated reality", "answer": "Simulation"}
 ]
