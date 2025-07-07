@@ -1,29 +1,11 @@
 [
-  {
-    "question": "What is 3 + 5?",
-    "options": [
-      "6",
-      "8",
-      "10"
-    ],
-    "answer": "8"
-  },
-  {
-    "question": "What is 9 x 2?",
-    "options": [
-      "18",
-      "16",
-      "20"
-    ],
-    "answer": "18"
-  },
-  {
-    "question": "What is 15 - 4?",
-    "options": [
-      "11",
-      "10",
-      "9"
-    ],
-    "answer": "11"
-  }
-]
+  {"question": "What is (8 + 2) × 5?", "options": ["40", "50", "60"], "answer": "50"},
+  {"question": "Solve: 12²", "options": ["124", "144", "132"], "answer": "144"},
+  {"question": "What is the square root of 121?", "options": ["10", "11", "12"], "answer": "11"},
+  {"question": "Simplify: 3(4 + 5) - 6", "options": ["21", "27", "33"], "answer": "21"},
+  {"question": "What is 7³?", "options": ["343", "512", "729"], "answer": "343"},
+  {"question": "If x = 3, what is 2x² + x?", "options": ["21", "18", "15"], "answer": "21"},
+  {"question": "Solve: (5×5) + (6×2)", "options": ["37", "25", "40"], "answer": "37"},
+  {"question": "What is 0.25 as a fraction?", "options": ["1/4", "1/2", "1/5"], "answer": "1/4"},
+  {"question": "Convert 150% to a decimal", "options": ["1.5", "0.15", "15"], "answer": "1.5"},
+  {"question": "How many degrees in a triangle?", "options": ["180", "360", "90"], "answer": "180"},
