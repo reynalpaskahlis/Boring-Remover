@@ -1,7 +1,7 @@
-let score = 0;
 let words = [];
 let currentWord = "";
-let displayWord = [];
+let score = 0;
+let currentIndex = 0;
 
 fetch("words.json")
   .then((res) => res.json())
@@ -11,33 +11,31 @@ fetch("words.json")
   });
 
 function newGame() {
-  const randomIndex = Math.floor(Math.random() * words.length);
-  currentWord = words[randomIndex];
-  displayWord = currentWord.split("").map((char, i) => (i % 2 === 0 ? "_" : char));
-  document.getElementById("game").innerText = displayWord.join(" ");
+  if (currentIndex >= words.length) {
+    document.getElementById("game").innerText = "🎉 Game Over!";
+    document.getElementById("message").innerText = `Your final score: ${score} out of ${words.length}`;
+    document.getElementById("guessInput").style.display = "none";
+    document.querySelector("button").style.display = "none";
+    return;
+  }
+
+  currentWord = words[currentIndex];
+  document.getElementById("game").innerText = `_ `.repeat(currentWord.length);
   document.getElementById("message").innerText = "";
+  document.getElementById("guessInput").value = "";
 }
 
 function submitGuess() {
-  const guess = document.getElementById("guessInput").value.toLowerCase();
-  if (guess === currentWord.toLowerCase()) {
-    score++;
-    document.getElementById("message").innerText = `Correct! You’ve completed ${score} word(s).`;
-    setTimeout(newGame, 2000);
-  } else {
-    document.getElementById("message").innerText = "Incorrect, try again.";
-  }
-  document.getElementById("guessInput").value = "";
-}
+  const guess = document.getElementById("guessInput").value.trim().toLowerCase();
+  const correct = guess === currentWord.toLowerCase();
 
+  if (correct) {
+    score++;
+    document.getElementById("message").innerText = "✅ Correct!";
+  } else {
+    document.getElementById("message").innerText = `❌ Wrong. The word was: ${currentWord}`;
   }
-  document.getElementById("game").innerText = displayWord.join(" ");
-  document.getElementById("message").innerText = correct ? "Good guess!" : "Try again.";
-  document.getElementById("guessInput").value = "";
-  if (!displayWord.includes("_")) {
-    document.getElementById("message").innerText = "You completed the word! Starting a new one...";
-   score++;
-    document.getElementById("message").innerText += ` You have completed ${score} word(s).`;
-    setTimeout(newGame, 2000);
-  }
+
+  currentIndex++;
+  setTimeout(newGame, 1500);
 }
