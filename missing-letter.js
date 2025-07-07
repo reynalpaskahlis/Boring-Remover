@@ -1,4 +1,4 @@
-
+let score = 0;
 let words = [];
 let currentWord = "";
 let displayWord = [];
@@ -20,12 +20,16 @@ function newGame() {
 
 function submitGuess() {
   const guess = document.getElementById("guessInput").value.toLowerCase();
-  let correct = false;
-  for (let i = 0; i < currentWord.length; i++) {
-    if (currentWord[i].toLowerCase() === guess && displayWord[i] === "_") {
-      displayWord[i] = currentWord[i];
-      correct = true;
-    }
+  if (guess === currentWord.toLowerCase()) {
+    score++;
+    document.getElementById("message").innerText = `Correct! You’ve completed ${score} word(s).`;
+    setTimeout(newGame, 2000);
+  } else {
+    document.getElementById("message").innerText = "Incorrect, try again.";
+  }
+  document.getElementById("guessInput").value = "";
+}
+
   }
   document.getElementById("game").innerText = displayWord.join(" ");
   document.getElementById("message").innerText = correct ? "Good guess!" : "Try again.";
